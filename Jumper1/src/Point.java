@@ -34,8 +34,8 @@ public void move(int speedX,int speedY){
 public int getDistance(Point other){
 	int result,dX,dY;
 	dX=(this.x-other.x)*(this.x-other.x);
-	dY=(this.x-other.x)*(this.x-other.x);
-	result=(int)(Math.sqrt(dX-dY));
+	dY=(this.y-other.y)*(this.y-other.y);
+	result=(int)(Math.sqrt(dX+dY));
 	return result;
 }
 

@@ -74,13 +74,12 @@ public class Body {
 	 * @return
 	 */
 	public boolean checkCollision(Body other) {
-		if ((this.center.getDistance(other.center) < this.height / 2
-				+ other.height / 2)
-				|| (this.center.getDistance(other.center) < this.width / 2
-						+ other.width / 2))
+		if((this.center.getDistance(other.center) <= this.height / 2 + other.height / 2) 
+			&& (this.center.getDistance(other.center) <= this.width / 2 + other.width / 2))
 			return true;
-
-		return false;
+		    return false;
+			
+			
 	}
 
 	/**
@@ -101,7 +100,7 @@ public class Body {
 			speedY = 0;
 			start.setY(maxY - height);
 		}
-		if (this.start.getX() + this.height + speedY <= minY && speedY <= 0) {
+		if (this.start.getY() + this.height + speedY <= minY && speedY <= 0) {
 			speedY = 0;
 			start.setY(minY);
 		}

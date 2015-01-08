@@ -4,6 +4,11 @@
 //tj. smjesti ih u gornji desni ugao kao staticnu hrpu. Ne znam zasto.
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+import com.sun.xml.internal.bind.v2.runtime.RuntimeUtil.ToStringAdapter;
 
 
 public class Game {
@@ -15,8 +20,16 @@ public static void main(String[] args) {
 	GameGraphics panel=new GameGraphics();
 	frame.setContentPane(panel);
 	
+	
+	JTextField field=new JTextField(panel.counter);
+	field.setLocation(250,30);
+	
+	panel.add(field);
+	
 	frame.setVisible(true);
 	panel.requestFocus(false);
+	
+	
 	
 	
 	
